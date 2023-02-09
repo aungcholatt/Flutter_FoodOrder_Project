@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_foodorder/screens/home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -18,6 +18,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.pink),
-        home: Home());
+        home: const Home());
   }
 }
