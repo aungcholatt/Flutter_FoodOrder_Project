@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_foodorder/screens/category_list.dart';
 import 'package:flutter_foodorder/screens/search_box.dart';
 import 'package:flutter_foodorder/screens/image_slider.dart';
 
@@ -14,7 +15,11 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: const [SearchBox(), ImageSlider()],
+        children: [
+          SearchBox(),
+          ImageSlider(),
+          CategoryList(),
+        ],
       ),
     );
   }

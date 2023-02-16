@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
         BottomNavigationBarItem(icon: Icon(Icons.shop), label: "Cart"),
         BottomNavigationBarItem(icon: Icon(Icons.logout), label: "Logout"),
       ]),
-      body: const Body(),
+      body: Body(),
     );
   }
 }

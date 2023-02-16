@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1039724275291",
+    "project_id": "flutterfoodorderproject",
+    "storage_bucket": "flutterfoodorderproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039724275291:android:3c1f7f0d1b0ad55bce817e",
+        "android_client_info": {
+          "package_name": "com.example.flutter_foodorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039724275291-pov1cgl28jcogp9u1qrlfkbacbt4p2gh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWJs0W5iJN-PvpmUDfz8s2HCiQDFRSC-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039724275291-pov1cgl28jcogp9u1qrlfkbacbt4p2gh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1039724275291-qo9rd6unuu7ocmk41655bvlrda3a1ee5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterFoodorder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
