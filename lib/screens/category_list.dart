@@ -9,6 +9,12 @@ class CategoryList extends StatefulWidget {
 }
 
 class _CategoryListState extends State<CategoryList> {
+  String defaultId = "QNcVCTRKXDyB7A5No9AR";
+  Future<QuerySnapshot<Map<String, dynamic>>> categoryProducts =
+      FirebaseFirestore.instance
+          .collection("products")
+          .where("category", isEqualTo: "QNcVCTRKXDyB7A5No9AR")
+          .get();
   @override
   Widget build(BuildContext context) {
     Stream<QuerySnapshot> categories =
@@ -24,6 +30,7 @@ class _CategoryListState extends State<CategoryList> {
                   scrollDirection: Axis.horizontal,
                   itemCount: snapshots.data!.docs.length,
                   itemBuilder: (context, index) {
+                    // print(snapshots.data!.docs.length);
                     return InkWell(
                       child: Container(
                         padding: const EdgeInsets.all(10),
@@ -33,7 +40,25 @@ class _CategoryListState extends State<CategoryList> {
                   },
                 ),
               );
-            })
+            }),
+        SingleChildScrollView(
+          child: FutureBuilder(
+            future: categoryProducts,
+            builder: (context,
+                AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
+              {
+                return Container(
+                  height: 220,
+                  child: ListView.builder(
+                      itemCount: snapshot.data!.docs.length,
+                      itemBuilder: (context, index) {
+                        return Text("${snapshot.data!.docs[index]['name']}");
+                      }),
+                );
+              }
+            },
+          ),
+        )
       ],
     );
   }
